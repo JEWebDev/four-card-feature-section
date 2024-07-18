@@ -177,7 +177,18 @@ main {
   }
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 @media (min-width: 800px) {
+  body {
+    padding: 0 1.5rem;
+  }
   header {
     display: flex;
     flex-direction: column;
