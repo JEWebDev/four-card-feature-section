@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 :root {
   --clr-red: hsl(0, 78%, 62%);
   --clr-cyan: hsl(180, 62%, 55%);
@@ -76,4 +77,137 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+.sr-only {
+  display: none;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--ff-regular);
+  font-size: var(--fs-regular);
+  background-color: var(--clr-neutral-100);
+  padding: 3rem 2rem;
+}
+
+main {
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 4rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  span {
+    display: block;
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .intro {
+    font-weight: var(--fw-thin);
+    font-size: 1.5rem;
+    color: var(--clr-neutral-300);
+  }
+
+  .description {
+    color: var(--clr-neutral-200);
+  }
+}
+
+.features-section {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  article {
+    max-width: 500px;
+    max-height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: var(--clr-neutral-200);
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 60px;
+      margin-top: 2.25rem;
+      align-self: flex-end;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .supervisor {
+    border-top: 4px solid var(--clr-cyan);
+  }
+
+  .team-builder {
+    border-top: 4px solid var(--clr-red);
+  }
+
+  .karma {
+    border-top: 4px solid var(--clr-orange);
+  }
+
+  .calculator {
+    border-top: 4px solid var(--clr-blue);
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .description {
+      max-width: 60%;
+      text-align: center;
+    }
+  }
+  .features-section {
+    display: flex;
+    flex-direction: row;
+
+    article {
+      max-width: 364px;
+    }
+    .wrapper {
+      flex-basis: 100%;
+    }
+
+    .supervisor {
+      align-self: center;
+      flex-basis: 100%;
+    }
+
+    .calculator {
+      align-self: center;
+      flex-basis: 100%;
+    }
+  }
 }
